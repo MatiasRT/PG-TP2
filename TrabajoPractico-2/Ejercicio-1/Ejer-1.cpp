@@ -10,8 +10,12 @@
 int main()
 {
 
-	// _____________________
-	// ::: Create window :::
+
+
+
+	
+	/* CREACION DE UNA PANTALLA CON IMAGEN MOVIENDOSE 
+
 
 	// Create a window with the same pixel depth as the desktop
 	sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
@@ -132,5 +136,6 @@ int main()
 		window.display();
 	}
 	return 0;
+	*/
 }
 
