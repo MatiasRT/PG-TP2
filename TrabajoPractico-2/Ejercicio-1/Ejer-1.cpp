@@ -6,8 +6,10 @@
 #define SPRITE_SPEED 5
 #define M_PI 3.1415
 
+
 int main()
 {
+
 	// _____________________
 	// ::: Create window :::
 
@@ -131,3 +133,4 @@ int main()
 	}
 	return 0;
 }
+
