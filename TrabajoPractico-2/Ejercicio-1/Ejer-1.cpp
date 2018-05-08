@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <math.h>
+#include "Juego.h"
 
 // Sprite speed (high values = high speed)
 #define SPRITE_SPEED 5
@@ -9,7 +10,9 @@
 
 int main()
 {
-
+	Juego juego;
+	juego.runGame();
+	return 0;
 
 
 

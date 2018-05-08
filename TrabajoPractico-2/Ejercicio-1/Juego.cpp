@@ -4,7 +4,7 @@
 
 Juego::Juego()
 {
-	window.create(sf::VideoMode(800, 600), "Ping!", sf::Style::Close);
+	window.create(sf::VideoMode(800, 600), "Ping Pong", sf::Style::Close);
 	window.setFramerateLimit(60);
 
 	//// Carga las fuentes ////
@@ -289,12 +289,12 @@ void Juego::play()
 
 void Juego::options()
 {
-	sf::Text titleText("Options", font1, 72);
+	sf::Text titleText("Opciones", font1, 72);
 	titleText.setOrigin(std::round(titleText.getLocalBounds().width / 2), 20);
 	titleText.setPosition((window.getSize().x / 2), 60);
 	titleText.setFillColor(sf::Color(245, 147, 51));
 
-	sf::Text toolTip("Press ENTER to return", font, 12);
+	sf::Text toolTip("Presiona ENTER para regresar", font, 12);
 	toolTip.setOrigin(std::round(toolTip.getLocalBounds().width / 2), 20);
 	toolTip.setPosition((window.getSize().x / 2), 440);
 	toolTip.setFillColor(sf::Color(245, 147, 51));
