@@ -1,7 +1,11 @@
+#ifdef _DEBUG
+#include "vld.h"
+#endif
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <math.h>
 #include "Juego.h"
+
 
 // Sprite speed (high values = high speed)
 #define SPRITE_SPEED 5

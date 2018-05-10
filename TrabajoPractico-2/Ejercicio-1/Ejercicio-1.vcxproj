@@ -72,15 +72,16 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)32bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Visual Leak Detector\include;$(SolutionDir)32bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)32bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <SubSystem>NotSet</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)Visual Leak Detector\lib\Win32;$(SolutionDir)32bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)32bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)32bit\bin\*.dll" "$(OutDir)"
+copy "$(SolutionDir)Visual Leak Detector\bin\Win32\" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -89,15 +90,16 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)64bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Visual Leak Detector\include;$(SolutionDir)64bit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib	;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)64bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <SubSystem>NotSet</SubSystem>
+      <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;vld.lib	;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Visual Leak Detector\lib\Win64;$(SolutionDir)64bit\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)64bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)64bit\bin\*.dll" "$(OutDir)"
+copy "$(SolutionDir)Visual Leak Detector\bin\Win64\" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
